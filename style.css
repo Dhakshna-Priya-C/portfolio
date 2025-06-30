@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Niconne&family=Nosifer&family=Pirata+One&family=Press+Start+2P&family=Rye&family=Spicy+Rice&display=swap');
+
+
+:root {
+    --White: hsl(0, 0%, 100%);
+    --Stone-100: hsl(30, 54%, 90%);
+    --Stone-150: hsl(30, 18%, 87%);
+    --Stone-600: hsl(30, 10%, 34%);
+    --Stone-900: hsl(24, 5%, 18%);
+    --Brown-800: hsl(14, 45%, 36%);
+    --Rose-800: hsl(332, 51%, 32%);
+    --Rose-50: hsl(330, 100%, 98%);
+    --font-1: "Young Serif", serif;
+    --font-2: "Outfit", sans-serif;  
+}
+
+body{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    color: white;
+}
+
+#main{
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#robo{
+    position: relative;
+}
+
+#h1{
+    font-family: "Rye", serif;
+    font-weight: 400;
+    font-size: 3rem;
+    position: absolute;
+    top: 15rem;
+
+       background: linear-gradient(
+        80deg,#00ffee,#2b65ff, #8000ff,#ff0080,
+        #00ffee,#2b65ff, #8000ff,#ff0080,
+        #00ffee,#2b65ff, #8000ff,#ff0080);
+      background-size: 300% 300%;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: animateGradient 5s linear infinite;
+      
+}
+    @keyframes animateGradient {
+      0% {
+        background-position: 0% 50%;
+      }
+      100% {
+        background-position: 100% 50%;
+      }
+    }
+
+.arrow-div{
+    padding-top: 3rem;
+    animation: move 0.8s ease infinite;
+    position:relative;
+}
+
+@keyframes move {
+
+    50%{
+      left: 2rem;
+    }
+
+    100%{
+      left: 0;
+    }
+}
+
+.arrow-div h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    background: linear-gradient(to right, rgb(243, 202, 218) 20%,
+    rgb(245, 104, 181) 65%, rgb(250, 10, 158) 30%);
+    border: .5px solid darkmagenta;
+    border-radius: 1rem;
+    box-shadow: 2px 2px  rgb(153, 114, 153);
+    padding: .1rem .3rem;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;  
+}
+
+.wrapper {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* clean spacing */
+}
+
+.loading {
+  background: radial-gradient(#a4dae4, rgb(97, 237, 241), rgb(30, 199, 250));
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  animation: load 0.8s ease infinite;
+}
+
+.loader .loading.one {
+  animation-delay: 0.3s;
+}
+.loader .loading.two {
+  animation-delay: 0.4s;
+}
+.loader .loading.three {
+  animation-delay: 0.5s;
+}
+
+@keyframes load {
+  0% {
+    width: 30px;
+    height: 30px;
+  }
+  50% {
+    width: 20px;
+    height: 20px;
+  }
+}
